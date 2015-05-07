@@ -1,0 +1,18 @@
+
+<h1>Cecelious</h1>
+
+<%= image_tag 'cecelious.gif', width: '100' %>
+
+<%= form_for @message do |f|%>
+  <%= f.label :note %>
+  <%= f.text_field :note %>
+  <%= f.submit %>
+<% end %>
+
+<ul>
+  <% @messages.reverse.each do |message| %>
+    <li>
+      <%= message.note %>
+    </li>
+  <% end %>
+</ul>
